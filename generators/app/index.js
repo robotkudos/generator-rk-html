@@ -21,13 +21,16 @@ module.exports = class extends Generator {
             'src/scss/_variables.scss',
             'src/scss/main.scss',
             '.babelrc',
-            '.gitignore'
         ];
 
         // copy all files
         files.forEach(file => this.fs.copyTpl(this.templatePath(file), this.destinationPath(file)));
 
+        // we need to send app name to the template
         this.fs.copyTpl(this.templatePath('package.json'), this.destinationPath('package.json'), {appname: this.options.appname});
+
+        // for some reason .gitignore won't copy from npm, so I had to rename it
+        this.fs.copyTpl(this.templatePath('_gitignore'), this.destinationPath('.gitignore'));
     }
 
     install() {
