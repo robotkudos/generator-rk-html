@@ -9,7 +9,7 @@
       "html-compile": "node scripts/pug.js",
       "html-watch": "nodemon --watch 'src/**/*.pug' --ext 'pug' --exec 'npm run html-compile'",
       "js-compile": "babel src/js --out-dir dist/js",
-      "js-watch": "nodemon --watch 'src/*.js' --ext 'js' --exec 'npm run js-compile'",
+      "js-watch": "nodemon --watch 'src/js/**/*.js' --ext 'js' --exec 'npm run js-compile'",
       "clean": "rimraf dist",
       "compile": "npm-run-all clean *-compile *-copy",
       "browser-sync": "browser-sync start --server 'dist' browser 'google chrome' --files 'dist' --watch",
