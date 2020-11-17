@@ -7,3 +7,5 @@
 ## Usage
 
 `yo rk-html <appname>`
+
+Creates the application inside current folder
