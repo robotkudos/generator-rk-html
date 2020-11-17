@@ -7,7 +7,7 @@
       "css-compile": "node-sass src/scss --output dist/css --recursive --output-style expanded --indent-type space --indent-width 2 --source-map-embed",
       "css-watch": "nodemon --watch 'src/**/*.scss' --ext 'scss' --exec 'npm run css-compile'",
       "html-compile": "node scripts/pug.js",
-      "html-watch": "nodemon --watch 'src/*.pug' --ext 'pug' --exec 'npm run html-compile'",
+      "html-watch": "nodemon --watch 'src/**/*.pug' --ext 'pug' --exec 'npm run html-compile'",
       "js-compile": "babel src/js --out-dir dist/js",
       "js-watch": "nodemon --watch 'src/*.js' --ext 'js' --exec 'npm run js-compile'",
       "clean": "rimraf dist",
